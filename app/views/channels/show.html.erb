@@ -5,5 +5,11 @@
   <%= @channel.name %>
 </p>
 
+
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag(@channel.avatar_url) if @channel.avatar? %>
+</p>
+
 <%= link_to 'Edit', edit_channel_path(@channel) %> |
 <%= link_to 'Back', channels_path %>

@@ -16,6 +16,13 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= image_tag(channel.avatar_url) if channel.avatar? %>
+    <%= form.file_field :avatar %>
+    <%= form.hidden_field :avatar_cache %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
