@@ -8,7 +8,7 @@
 
 <p>
   <strong>Avatar:</strong>
-  <%= image_tag(@channel.avatar_url) if @channel.avatar? %>
+  <%= image_tag(@channel.avatar.url) if @channel.avatar? %>
 </p>
 
 <%= link_to 'Edit', edit_channel_path(@channel) %> |

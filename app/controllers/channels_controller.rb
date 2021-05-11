@@ -1,5 +1,6 @@
 class ChannelsController < ApplicationController
   before_action :set_channel, only: %i[ show edit update destroy ]
+  # skip_before_action :verify_authenticity_token
 
   # GET /channels or /channels.json
   def index
@@ -64,6 +65,6 @@ class ChannelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def channel_params
-      params.require(:channel).permit(:name, :avatar)
+      params.require(:channel).permit(:name, :avatar, :avatar_cache)
     end
 end
